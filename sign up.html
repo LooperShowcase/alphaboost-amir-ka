@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="https://cdn.iconscout.com/icon/free/png-256/dodge-1863641-1581236.png"
+    />
+    <title>dodge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="sign up.html">sign up</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li id="ter"><input id="alwan" onchange="changebg()" type="color" /></li>
+      <li id="anonymouspic">
+        <img
+          id="sora"
+          src="https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1214428300?k=20&m=1214428300&s=170667a&w=0&h=NPyJe8rXdOnLZDSSCdLvLWOtIeC9HjbWFIx8wg5nIks="
+          width="15%"
+        />
+      </li>
+    </ul>
+    <form>
+      <label>first name</label>
+      <input type="text" />
+      <br />
+      <label>password</label>
+      <input type="password" />
+      <br />
+      <label>email</label>
+      <input type="email" />
+      <br />
+      <label>gender</label>
+      <br />
+      <label>boy</label>
+      <input type="radio" />
+      <br />
+      <label>girl</label>
+      <input type="radio" />
+      <br />
+      <input id="pro" type="file" onchange="changeprofile()" />
+    </form>
+    <hr />
+    <hr />
+    <script>
+      function changebg() {
+        var newcolor = document.getElementById("alwan").value;
+        document.body.style.background = newcolor;
+      }
+
+      function changeprofile() {
+        var newprofile = document.getElementById("pro").files[0].name;
+        document.getElementById("sora").src = newprofile;
+      }
+    </script>
+  </body>
+</html>
